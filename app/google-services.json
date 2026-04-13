@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "424872926674",
+    "project_id": "vendex-fe9c3",
+    "storage_bucket": "vendex-fe9c3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424872926674:android:9aee59388259c17b1b3c0b",
+        "android_client_info": {
+          "package_name": "com.proyecto.vendex_proyecto_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKFguSmKG04XF1fUbY74SO1iZrpAvXphE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
