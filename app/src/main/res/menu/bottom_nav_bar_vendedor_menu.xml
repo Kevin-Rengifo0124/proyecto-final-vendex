@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Mis productos-->
+    <item
+        android:id="@+id/opcion_mis_productos_vendedor"
+        android:title="@string/opcion_mis_productos_vendedor"
+        android:icon="@drawable/icono_mis_productos"
+        />
+    <!--Agregar un producto-->
+    <item
+        android:id="@+id/opcion_agregar_productos_vendedor"
+        android:title=""
+        android:enabled="false"
+        />
+    <!--Ordenes de los clientes-->
+    <item
+        android:id="@+id/opcion_mis_ordenes_vendedor"
+        android:title="@string/opcion_mis_ordenes_vendedor"
+        android:icon="@drawable/icono_ordenes"
+        />
+
+
+</menu>

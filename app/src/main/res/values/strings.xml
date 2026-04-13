@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Vendex</string>
+    <string name="opcion_inicio_vendedor">Inicio</string>
+    <string name="opcion_mi_tienda_vendedor">Mi Tienda</string>
+    <string name="opcion_resenia_vendedor">Reseñas</string>
+    <string name="opcion_cerrar_sesion_vendedor">Cerrar Sesión</string>
+    
+    <string name="opcion_mis_productos_vendedor">Productos</string>
+    <string name="opcion_mis_ordenes_vendedor">Órdenes</string>
+
 </resources>

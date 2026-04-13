@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/grupo_opciones"
+        android:checkableBehavior="single">
+
+        <!--Inicio-->
+        <item
+            android:id="@+id/opcion_inicio_vendedor"
+            android:title="@string/opcion_inicio_vendedor"
+            android:icon="@drawable/icono_inicio"/>
+        <!--Mi tienda-->
+        <item
+            android:id="@+id/opcion_mi_tienda_vendedor"
+            android:title="@string/opcion_mi_tienda_vendedor"
+           android:icon="@drawable/icono_mi_tienda"/>
+        <!--Resenias-->
+        <item
+            android:id="@+id/opcion_resenia_vendedor"
+            android:title="@string/opcion_resenia_vendedor"
+            android:icon="@drawable/icono_resenia"/>
+    </group>
+
+    <!--Salir-->
+    <item
+        android:id="@+id/opcion_cerrar_sesion_vendedor"
+        android:title="@string/opcion_cerrar_sesion_vendedor"
+        android:icon="@drawable/icono_salir"
+        />
+
+</menu>
