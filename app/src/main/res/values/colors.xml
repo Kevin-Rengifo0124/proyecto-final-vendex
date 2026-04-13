@@ -2,4 +2,5 @@
 <resources>
     <color name="vendex_bg_dark">#1C1E26</color>
     <color name="vendex_blue_primary">#2D7DD2</color>
+    <color name="colorAppName">#26C6DA</color>
 </resources>
