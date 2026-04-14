@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Vendex</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
     <string name="opcion_inicio_vendedor">Inicio</string>
     <string name="opcion_mi_tienda_vendedor">Mi Tienda</string>
     <string name="opcion_resenia_vendedor">Reseñas</string>
