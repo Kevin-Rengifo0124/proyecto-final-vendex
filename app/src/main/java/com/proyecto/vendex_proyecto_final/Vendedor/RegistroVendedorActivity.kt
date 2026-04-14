@@ -1,0 +1,13 @@
+package com.proyecto.vendex_proyecto_final.Vendedor
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.proyecto.vendex_proyecto_final.R
+
+class RegistroVendedorActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_registro_vendedor)
+
+    }
+}
