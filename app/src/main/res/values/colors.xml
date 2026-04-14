@@ -4,4 +4,8 @@
     <color name="vendex_blue_primary">#2D7DD2</color>
     <color name="colorAppName">#26C6DA</color>
     <color name="colorBlanco">#FFFFFF</color>
+    <color name="vendex_input_bg">#1A2D7DD2</color>
+    <color name="vendex_input_stroke">#2D7DD2</color>
+    <color name="vendex_hint_color">#7986CB</color>
+    <color name="vendex_card_bg">#1E2230</color>
 </resources>

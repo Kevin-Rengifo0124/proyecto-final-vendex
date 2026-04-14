@@ -10,25 +10,24 @@
         <!--Inicio-->
         <item
             android:id="@+id/opcion_inicio_vendedor"
-            android:title="@string/opcion_inicio_vendedor"
-            android:icon="@drawable/icono_inicio"/>
+            android:icon="@drawable/icono_inicio"
+            android:title="@string/opcion_inicio_vendedor" />
         <!--Mi tienda-->
         <item
             android:id="@+id/opcion_mi_tienda_vendedor"
-            android:title="@string/opcion_mi_tienda_vendedor"
-           android:icon="@drawable/icono_mi_tienda"/>
+            android:icon="@drawable/icono_mi_tienda"
+            android:title="@string/opcion_mi_tienda_vendedor" />
         <!--Resenias-->
         <item
             android:id="@+id/opcion_resenia_vendedor"
-            android:title="@string/opcion_resenia_vendedor"
-            android:icon="@drawable/icono_resenia"/>
+            android:icon="@drawable/icono_resenia"
+            android:title="@string/opcion_resenia_vendedor" />
     </group>
 
     <!--Salir-->
     <item
         android:id="@+id/opcion_cerrar_sesion_vendedor"
-        android:title="@string/opcion_cerrar_sesion_vendedor"
         android:icon="@drawable/icono_salir"
-        />
+        android:title="@string/opcion_cerrar_sesion_vendedor" />
 
 </menu>

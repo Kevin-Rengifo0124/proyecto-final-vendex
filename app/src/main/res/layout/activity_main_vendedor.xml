@@ -20,7 +20,15 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header_vendedor"
         app:menu="@menu/nav_drawer_vendedor_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:background="@color/vendex_card_bg"
+        app:itemTextColor="@color/colorBlanco"
+        app:itemIconTint="@color/vendex_blue_primary"
+        app:itemRippleColor="@color/vendex_input_bg"
+        app:itemShapeFillColor="@color/vendex_input_bg"
+        app:itemShapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        app:itemHorizontalPadding="12dp"
+        app:itemBackground="@drawable/bg_item_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

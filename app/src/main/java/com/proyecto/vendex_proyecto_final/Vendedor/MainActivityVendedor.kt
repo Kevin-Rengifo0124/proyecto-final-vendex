@@ -3,13 +3,10 @@ package com.proyecto.vendex_proyecto_final.Vendedor
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import com.proyecto.vendex_proyecto_final.R

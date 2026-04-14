@@ -4,5 +4,24 @@
         <item name="android:windowBackground">@color/vendex_bg_dark</item>
         <item name="colorPrimary">@color/vendex_blue_primary</item>
         <item name="android:actionBarSize">80dp</item>
+        <item name="android:statusBarColor">@color/vendex_blue_primary</item>
+        <item name="android:navigationBarColor">@color/vendex_bg_dark</item>
     </style>
+    <style name="InputOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxStrokeColor">@color/vendex_blue_primary</item>
+        <item name="boxBackgroundColor">@color/vendex_input_bg</item>
+        <item name="hintTextColor">@color/vendex_hint_color</item>
+        <item name="android:textColorHint">@color/vendex_hint_color</item>
+    </style>
+    <style name="ToolbarTitleStyle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
 </resources>

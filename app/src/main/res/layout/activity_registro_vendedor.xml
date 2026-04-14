@@ -6,35 +6,54 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/vendex_bg_dark"
     tools:context=".Vendedor.RegistroVendedorActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/vendex_card_bg"
+        android:paddingTop="0dp"
         android:padding="15dp">
 
-        <TextView
-            android:text="@string/txtRegistroVendedor"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/registro_vendedor"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_registro"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:paddingBottom="28dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:text="@string/txtRegistroVendedor"
+                android:textColor="@color/colorBlanco"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/registro_vendedor"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+        </LinearLayout>
+
 
         <!--Nombres Completos-->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            
+
             <EditText
                 android:id="@+id/editNombresVendedor"
                 android:hint="@string/editNombresVendedor"
@@ -48,6 +67,8 @@
 
         <!--Email-->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -64,6 +85,8 @@
 
         <!--Password-->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
@@ -82,6 +105,8 @@
 
         <!--Confirmar Password-->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
@@ -99,13 +124,15 @@
 
         <!--Registrar Venededor-->
         <com.google.android.material.button.MaterialButton
+            app:backgroundTint="@color/vendex_blue_primary"
+            android:layout_marginBottom="10dp"
             android:id="@+id/botonRegistrarVendedor"
             android:text="@string/botonRegistrarVendedor"
-            app:cornerRadius="8dp"
+            app:cornerRadius="12dp"
             android:textAllCaps="true"
             android:layout_marginTop="25dp"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
 
