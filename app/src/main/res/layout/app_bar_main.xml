@@ -12,13 +12,13 @@
         android:background="@drawable/bg_header_registro"
         android:elevation="0dp"
         app:elevation="0dp"
+        android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:background="@android:color/transparent"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             app:titleTextAppearance="@style/ToolbarTitleStyle"

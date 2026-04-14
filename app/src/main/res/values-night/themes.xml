@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.VendexProyectoFinal" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/vendex_bg_dark</item>
-        <item name="colorPrimary">@color/vendex_blue_primary</item>
+        <item name="colorPrimary">#0D47A1</item>
         <item name="android:actionBarSize">80dp</item>
         <item name="android:statusBarColor">@color/vendex_blue_primary</item>
         <item name="android:navigationBarColor">@color/vendex_bg_dark</item>
