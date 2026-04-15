@@ -3,10 +3,16 @@
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
 
+    <!--NavigationDrawer vendedor-->
     <string name="opcion_inicio_vendedor">Inicio</string>
     <string name="opcion_mi_tienda_vendedor">Mi Tienda</string>
     <string name="opcion_resenia_vendedor">Reseñas</string>
     <string name="opcion_cerrar_sesion_vendedor">Cerrar Sesión</string>
+
+    <!--NavigationDrawer cliente-->
+    <string name="opcion_inicio_cliente">Inicio</string>
+    <string name="opcion_mi_perfil_cliente">Mi Perfil</string>
+    <string name="opcion_cerrar_sesion_cliente">Cerrar Sesión</string>
 
     <string name="opcion_mis_productos_vendedor">Productos</string>
     <string name="opcion_mis_ordenes_vendedor">Órdenes</string>
@@ -26,9 +32,6 @@
     <string name="botonLogin">Ingresar</string>
     <string name="txtNoCuenta">¿No tienes una cuenta?</string>
     <string name="textViewRegistarVendedor">Registrarme</string>
-
-
-
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
