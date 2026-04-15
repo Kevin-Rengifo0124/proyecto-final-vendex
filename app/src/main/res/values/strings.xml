@@ -15,7 +15,7 @@
     
     <!--Registro de vendedor-->
     <string name="txtRegistroVendedor">Registro Vendedor</string>
-    <string name="editNombresVendedor">Nombres Completos</string>
+    <string name="editNombresVendedor">Nombre Completo</string>
     <string name="editEmailVendedor">Email</string>
     <string name="editPasswordVendedor">Password</string>
     <string name="editConfirmarPasswordVendedor">Confirmar Password</string>
