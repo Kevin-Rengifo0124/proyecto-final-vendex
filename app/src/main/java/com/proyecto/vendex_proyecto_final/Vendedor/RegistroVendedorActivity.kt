@@ -1,12 +1,14 @@
 package com.proyecto.vendex_proyecto_final.Vendedor
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.proyecto.vendex_proyecto_final.Constantes
 import com.proyecto.vendex_proyecto_final.R
 import com.proyecto.vendex_proyecto_final.databinding.ActivityRegistroVendedorBinding
@@ -100,6 +102,20 @@ class RegistroVendedorActivity : AppCompatActivity() {
         datosVendedor["email"] = "$emailBD"
         datosVendedor["tipoUsuario"] = "Vendedor"
         datosVendedor["tiempoRegistro"] = tiempoBD
+
+        val references = FirebaseDatabase.getInstance().getReference("Usuarios")
+        references.child(userIdBD!!)
+            .setValue(datosVendedor)
+            .addOnSuccessListener {
+                progressDialog.dismiss()
+                startActivity(Intent(this, MainActivityVendedor::class.java))
+                finish()
+            }
+            .addOnFailureListener {e ->
+                progressDialog.dismiss()
+                Toast.makeText(this, "Falló el registro en base de datos debido a ${e.message}", Toast.LENGTH_SHORT)
+                    .show()
+            }
 
 
     }
