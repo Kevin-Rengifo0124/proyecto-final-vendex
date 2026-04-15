@@ -22,7 +22,7 @@ import com.proyecto.vendex_proyecto_final.databinding.ActivityMainVendedorBindin
 class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainVendedorBinding
-    private var firebaseAuth : FirebaseAuth ?= null
+    private var firebaseAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,13 +50,19 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
     }
 
+    private fun cerrarSesion() {
+        firebaseAuth!!.signOut()
+        startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+        finish()
+        Toast.makeText(applicationContext, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
+    }
+
     private fun comprobarSesion() {
         /*Si el usuario no ha iniciado sesion*/
-        if (firebaseAuth!!.currentUser == null){
-            startActivity(Intent(applicationContext, RegistroVendedorActivity :: class.java))
-            Toast.makeText(applicationContext, "Vendedor no registrado o no logueado", Toast.LENGTH_SHORT).show()
-        }else {
-            Toast.makeText(applicationContext, "Vendedor en linea", Toast.LENGTH_SHORT).show()
+        if (firebaseAuth!!.currentUser == null) {
+            startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+        } else {
+            Toast.makeText(applicationContext, "Usuario en linea", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -79,8 +85,7 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
             }
 
             R.id.opcion_cerrar_sesion_vendedor -> {
-                Toast.makeText(applicationContext, "Saliste de la aplicación", Toast.LENGTH_SHORT)
-                    .show()
+                cerrarSesion()
             }
 
             R.id.opcion_mis_productos_vendedor -> {
