@@ -14,8 +14,13 @@
     <string name="opcion_mi_perfil_cliente">Mi Perfil</string>
     <string name="opcion_cerrar_sesion_cliente">Cerrar Sesión</string>
 
+    <!--Bottom navigation bar vendedor-->
     <string name="opcion_mis_productos_vendedor">Productos</string>
     <string name="opcion_mis_ordenes_vendedor">Órdenes</string>
+
+    <!--Bottom navigation bar cliente-->
+    <string name="opcion_tienda_cliente">Tienda</string>
+    <string name="opcion_mis_ordenes_cliente">Mis Órdenes</string>
 
     <string name="txt_bienvenida">Bienvenido</string>
 

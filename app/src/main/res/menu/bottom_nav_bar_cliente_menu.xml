@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Mis productos-->
+    <item
+        android:id="@+id/opcion_tienda_cliente"
+        android:icon="@drawable/icono_mi_tienda"
+        android:title="@string/opcion_tienda_cliente" />
+
+    <!--Mis ordenes-->
+    <item
+        android:id="@+id/opcion_mis_ordenes_cliente"
+        android:icon="@drawable/icono_ordenes"
+        android:title="@string/opcion_mis_ordenes_cliente" />
+
+</menu>
