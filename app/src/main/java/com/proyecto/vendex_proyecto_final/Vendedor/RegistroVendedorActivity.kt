@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.proyecto.vendex_proyecto_final.Constantes
 import com.proyecto.vendex_proyecto_final.R
 import com.proyecto.vendex_proyecto_final.databinding.ActivityRegistroVendedorBinding
 
@@ -78,12 +79,28 @@ class RegistroVendedorActivity : AppCompatActivity() {
                 insertarInformacionBD()
             }
 
-            .addOnFailureListener { e->
-                Toast.makeText(this, "Falló el registro debido a ${e.message}", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Falló el registro debido a ${e.message}", Toast.LENGTH_SHORT)
+                    .show()
             }
     }
 
     private fun insertarInformacionBD() {
+        progressDialog.setMessage("Guardando información...")
+
+        val userIdBD = firebaseAuth.uid
+        val nombreBD = nombre
+        val emailBD = email
+        val tiempoBD = Constantes().obtenerTiempoDispositivo()
+
+        val datosVendedor = HashMap<String, Any>()
+
+        datosVendedor["uid"] = "$userIdBD"
+        datosVendedor["nombre"] = "$nombreBD"
+        datosVendedor["email"] = "$emailBD"
+        datosVendedor["tipoUsuario"] = "Vendedor"
+        datosVendedor["tiempoRegistro"] = tiempoBD
+
 
     }
 }
