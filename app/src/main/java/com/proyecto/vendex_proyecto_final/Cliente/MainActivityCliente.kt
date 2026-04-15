@@ -7,7 +7,7 @@ import com.proyecto.vendex_proyecto_final.R
 class MainActivityCliente : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_cliente)
 
     }
 }
