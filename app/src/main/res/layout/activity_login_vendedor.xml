@@ -43,9 +43,84 @@
                 android:src="@drawable/login_vendedor"
                 android:layout_width="80dp"
                 android:layout_height="80dp"/>
-
-
         </LinearLayout>
+
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editEmailVendedor"
+                android:hint="@string/editEmailVendedor"
+                android:drawableStart="@drawable/icono_email"
+                android:textColor="@color/colorBlanco"
+                android:drawablePadding="5dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+
+            <EditText
+                android:id="@+id/editPasswordVendedor"
+                android:hint="@string/editPasswordVendedor"
+                android:drawableStart="@drawable/icono_password"
+                android:textColor="@color/colorBlanco"
+                android:drawablePadding="5dp"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Boton Login-->
+        <com.google.android.material.button.MaterialButton
+            app:backgroundTint="@color/vendex_blue_primary"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/botonLogin"
+            android:text="@string/botonLogin"
+            app:cornerRadius="12dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--No tiene cuenta-->
+        <TextView
+            android:id="@+id/txtNoCuenta"
+            android:text="@string/txtNoCuenta"
+            android:textColor="@color/vendex_blue_primary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Registrar Vendedor-->
+        <TextView
+            android:id="@+id/textViewRegistarVendedor"
+            android:text="@string/textViewRegistarVendedor"
+            android:textColor="@color/vendex_blue_primary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

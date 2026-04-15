@@ -125,7 +125,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Registrar Venededor-->
+        <!--Registrar Vendedor-->
         <com.google.android.material.button.MaterialButton
             app:backgroundTint="@color/vendex_blue_primary"
             android:layout_marginBottom="10dp"
