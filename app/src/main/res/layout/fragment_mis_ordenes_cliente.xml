@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cliente.Bottom_Nav_Fragments_Cliente.FragmentMisOrdenes">
+    tools:context=".Cliente.Bottom_Nav_Fragments_Cliente.FragmentMisOrdenesCliente">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="MIS ORDENES"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
 
 </FrameLayout>

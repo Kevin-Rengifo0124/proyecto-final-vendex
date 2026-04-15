@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".Cliente.Bottom_Nav_Fragments_Cliente.FragmentTiendaCliente">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="TIENDA"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
 
 </FrameLayout>
