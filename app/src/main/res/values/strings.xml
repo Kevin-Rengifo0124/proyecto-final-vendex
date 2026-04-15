@@ -21,6 +21,14 @@
     <string name="editConfirmarPasswordVendedor">Confirmar Password</string>
     <string name="botonRegistrarVendedor">Registrarme</string>
 
+    <!--Login de vendedor-->
+    <string name="txtLoginVendedor">Login Vendedor</string>
+    <string name="botonLogin">Ingresar</string>
+    <string name="txtNoCuenta">¿No tienes una cuenta?</string>
+    <string name="textViewRegistarVendedor">Registrarme</string>
+
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
