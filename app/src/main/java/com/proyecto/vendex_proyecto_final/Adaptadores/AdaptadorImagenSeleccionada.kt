@@ -14,55 +14,36 @@ class AdaptadorImagenSeleccionada(
     private val context: Context,
     private val imagenesSelecArrayList: ArrayList<ModeloImagenSeleccionada>
 ) : RecyclerView.Adapter<AdaptadorImagenSeleccionada.HolderImagenSeleccionada>() {
-    private lateinit var binding: ItemImagenSeleccionadasBinding
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): HolderImagenSeleccionada {
-
-        binding =
-            ItemImagenSeleccionadasBinding.inflate(LayoutInflater.from(context), parent, false)
-        return HolderImagenSeleccionada(binding.root)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderImagenSeleccionada {
+        val binding = ItemImagenSeleccionadasBinding.inflate(
+            LayoutInflater.from(context), parent, false
+        )
+        return HolderImagenSeleccionada(binding)
     }
 
-    override fun onBindViewHolder(
-        holder: HolderImagenSeleccionada,
-        position: Int
-    ) {
-
+    override fun onBindViewHolder(holder: HolderImagenSeleccionada, position: Int) {
         val modelo = imagenesSelecArrayList[position]
         val imagenUri = modelo.imageUri
 
-        //Leyendo la imagen
         try {
             Glide.with(context)
                 .load(imagenUri)
                 .placeholder(R.drawable.item_imagen)
                 .into(holder.imagenItem)
-        }catch (e: Exception){
+        } catch (e: Exception) { }
 
-        }
-
-        //Evento para eliminar una imagen de una lista
         holder.boton_borrar.setOnClickListener {
             imagenesSelecArrayList.remove(modelo)
             notifyDataSetChanged()
         }
-
-
     }
 
-    override fun getItemCount(): Int {
-        return imagenesSelecArrayList.size
+    override fun getItemCount(): Int = imagenesSelecArrayList.size
+
+    inner class HolderImagenSeleccionada(val binding: ItemImagenSeleccionadasBinding)
+        : RecyclerView.ViewHolder(binding.root) {
+        val imagenItem = binding.imagenItem
+        val boton_borrar = binding.borrarItem
     }
-
-    inner class HolderImagenSeleccionada(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        var imagenItem = binding.imagenItem
-        var boton_borrar = binding.borrarItem
-
-    }
-
-
 }
