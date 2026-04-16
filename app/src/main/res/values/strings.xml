@@ -2,9 +2,15 @@
     <string name="app_name">Vendex</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
-    <string name="tipoVendedor">Vendedor</string>
-    <string name="tipoCliente">Cliente</string>
 
+    <!--Seleccionar Tipo-->
+    <string name="txt_como_deseas_ingresar">¿Cómo deseas ingresar?</string>
+    <string name="desc_vendedor">Gestiona tu tienda y productos</string>
+    <string name="desc_cliente">Explora y realiza pedidos</string>
+    <string name="btn_ingresar_vendedor">Vendedor</string>
+    <string name="btn_ingresar_cliente">Cliente</string>
+    <string name="tipoVendedor">Ingresar como vendedor</string>
+    <string name="tipoCliente">Ingresar como cliente</string>
 
     <!--NavigationDrawer vendedor-->
     <string name="opcion_inicio_vendedor">Inicio</string>
