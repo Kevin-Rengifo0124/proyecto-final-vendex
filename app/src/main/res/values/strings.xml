@@ -2,6 +2,9 @@
     <string name="app_name">Vendex</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
+    <string name="tipoVendedor">Vendedor</string>
+    <string name="tipoCliente">Cliente</string>
+
 
     <!--NavigationDrawer vendedor-->
     <string name="opcion_inicio_vendedor">Inicio</string>
