@@ -40,15 +40,15 @@ class LoginVendedorActivity : AppCompatActivity() {
     private var email = ""
     private var password = ""
     private fun validarInfo() {
-        email = binding.editEmailVendedor.text.toString().trim()
-        password = binding.editPasswordVendedor.text.toString().trim()
+        email = binding.editEmail.text.toString().trim()
+        password = binding.editPassword.text.toString().trim()
 
         if (email.isEmpty()) {
-            mostrarError(binding.editEmailVendedor, "Ingrese su email completo")
+            mostrarError(binding.editEmail, "Ingrese su email completo")
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            mostrarError(binding.editEmailVendedor, "Email no válido")
+            mostrarError(binding.editEmail, "Email no válido")
         } else if (password.isEmpty()) {
-            mostrarError(binding.editPasswordVendedor, "Ingrese su password")
+            mostrarError(binding.editPassword, "Ingrese su password")
         } else {
             loginVendedor()
         }

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.proyecto.vendex_proyecto_final.R
+import com.proyecto.vendex_proyecto_final.SeleccionarTipoActivity
 import com.proyecto.vendex_proyecto_final.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentOrdenesVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentProductosVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Nav_Fragments_Vendedor.FragmentInicioVendedor
@@ -52,7 +53,7 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
     private fun cerrarSesion() {
         firebaseAuth!!.signOut()
-        startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+        startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
         finish()
         Toast.makeText(applicationContext, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
     }
@@ -60,7 +61,7 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
     private fun comprobarSesion() {
         /*Si el usuario no ha iniciado sesion*/
         if (firebaseAuth!!.currentUser == null) {
-            startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+            startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
         } else {
             Toast.makeText(applicationContext, "Usuario en linea", Toast.LENGTH_SHORT).show()
         }
