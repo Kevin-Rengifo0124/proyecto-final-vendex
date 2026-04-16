@@ -43,6 +43,11 @@
     <string name="txtNoCuenta">¿No tienes una cuenta?</string>
     <string name="textViewRegistarVendedor">Registrarme</string>
 
+    <!--Login de vendedor-->
+    <string name="txtLoginCliente">Login Cliente</string>
+    <string name="botonLoginCliente">Ingresar</string>
+    <string name="textViewRegistarCliente">Registrarme</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

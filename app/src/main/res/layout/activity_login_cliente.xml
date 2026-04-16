@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/vendex_bg_dark"
-    tools:context=".Vendedor.LoginVendedorActivity">
-    
+    tools:context=".Cliente.LoginClienteActivity">
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             android:layout_marginBottom="20dp">
 
             <TextView
-                android:text="@string/txtLoginVendedor"
+                android:text="@string/txtLoginCliente"
                 android:textColor="@color/colorBlanco"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -40,7 +40,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/login_vendedor"
+                android:src="@drawable/login_cliente"
                 android:layout_width="80dp"
                 android:layout_height="80dp"/>
         </LinearLayout>
@@ -89,8 +89,8 @@
         <com.google.android.material.button.MaterialButton
             app:backgroundTint="@color/vendex_blue_primary"
             android:layout_marginBottom="10dp"
-            android:id="@+id/botonLogin"
-            android:text="@string/botonLogin"
+            android:id="@+id/botonLoginCliente"
+            android:text="@string/botonLoginCliente"
             app:cornerRadius="12dp"
             android:textAllCaps="true"
             android:layout_marginTop="25dp"
@@ -112,8 +112,8 @@
 
         <!--Registrar Vendedor-->
         <TextView
-            android:id="@+id/textViewRegistarVendedor"
-            android:text="@string/textViewRegistarVendedor"
+            android:id="@+id/textViewRegistarCliente"
+            android:text="@string/textViewRegistarCliente"
             android:textColor="@color/vendex_blue_primary"
             android:textStyle="bold"
             android:gravity="center"
