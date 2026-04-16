@@ -12,6 +12,13 @@
             android:id="@+id/opcion_inicio_vendedor"
             android:icon="@drawable/icono_inicio"
             android:title="@string/opcion_inicio_vendedor" />
+
+        <!--Categorias-->
+        <item
+            android:id="@+id/opcion_categorias_vendedor"
+            android:icon="@drawable/icono_categoria"
+            android:title="@string/opcion_categorias_vendedor" />
+
         <!--Mi tienda-->
         <item
             android:id="@+id/opcion_mi_tienda_vendedor"

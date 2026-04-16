@@ -15,6 +15,7 @@ import com.proyecto.vendex_proyecto_final.R
 import com.proyecto.vendex_proyecto_final.SeleccionarTipoActivity
 import com.proyecto.vendex_proyecto_final.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentOrdenesVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentProductosVendedor
+import com.proyecto.vendex_proyecto_final.Vendedor.Nav_Fragments_Vendedor.FragmentCategoriasVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Nav_Fragments_Vendedor.FragmentInicioVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Nav_Fragments_Vendedor.FragmentMiTiendaVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Nav_Fragments_Vendedor.FragmentReseniasVendedor
@@ -79,6 +80,10 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
             R.id.opcion_mi_tienda_vendedor -> {
                 replaceFragment(FragmentMiTiendaVendedor())
+            }
+
+            R.id.opcion_categorias_vendedor -> {
+                replaceFragment(FragmentCategoriasVendedor())
             }
 
             R.id.opcion_resenia_vendedor -> {

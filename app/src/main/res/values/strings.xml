@@ -15,6 +15,7 @@
     <!--NavigationDrawer vendedor-->
     <string name="opcion_inicio_vendedor">Inicio</string>
     <string name="opcion_mi_tienda_vendedor">Mi Tienda</string>
+    <string name="opcion_categorias_vendedor">Categorias</string>
     <string name="opcion_resenia_vendedor">Reseñas</string>
     <string name="opcion_cerrar_sesion_vendedor">Cerrar Sesión</string>
 
@@ -68,11 +69,9 @@
     <string name="editNotaDescuentoProducto">Ejemplo: 10% Descuento</string>
     <string name="botonAgregarProducto">Agregar Producto</string>
 
-
-
-
-
-
+    <!--Agregar Categorias-->
+    <string name="editCategoria">Ingrese la Categoria</string>
+    <string name="botonAgregarCategoria">Agregar Categoria</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
