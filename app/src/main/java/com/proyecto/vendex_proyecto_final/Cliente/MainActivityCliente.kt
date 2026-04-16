@@ -1,5 +1,6 @@
 package com.proyecto.vendex_proyecto_final.Cliente
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -9,16 +10,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import com.proyecto.vendex_proyecto_final.Cliente.Bottom_Nav_Fragments_Cliente.FragmentMisOrdenesCliente
 import com.proyecto.vendex_proyecto_final.Cliente.Bottom_Nav_Fragments_Cliente.FragmentTiendaCliente
 import com.proyecto.vendex_proyecto_final.Cliente.Nav_Fragments_Cliente.FragmentInicioCliente
 import com.proyecto.vendex_proyecto_final.Cliente.Nav_Fragments_Cliente.FragmentMiPerfilCliente
 import com.proyecto.vendex_proyecto_final.R
+import com.proyecto.vendex_proyecto_final.SeleccionarTipoActivity
 import com.proyecto.vendex_proyecto_final.databinding.ActivityMainClienteBinding
 
 class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainClienteBinding
+
+    private var firebaseAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +32,9 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -44,7 +52,22 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
 
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun cerrarSesion() {
+        firebaseAuth!!.signOut()
+        startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
+        finishAffinity()
+        Toast.makeText(applicationContext, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun comprobarSesion() {
+        /*Si el usuario no ha iniciado sesion*/
+        if (firebaseAuth!!.currentUser == null) {
+            startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
+            finishAffinity()
+        } else {
+            Toast.makeText(applicationContext, "Usuario en linea", Toast.LENGTH_SHORT).show()
+        }
+    }    private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.navFragment, fragment).commit()
     }
 
@@ -57,7 +80,7 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
                 replaceFragment(FragmentMiPerfilCliente())
             }
             R.id.opcion_cerrar_sesion_cliente -> {
-                Toast.makeText(applicationContext, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
+                cerrarSesion()
             }
             R.id.opcion_tienda_cliente -> {
                 replaceFragment(FragmentTiendaCliente())
