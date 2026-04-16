@@ -40,7 +40,6 @@ class RegistroVendedorActivity : AppCompatActivity() {
     private var email = ""
     private var password = ""
     private var comprobarPassword = ""
-
     private fun validarInformacion() {
         nombre = binding.editNombresVendedor.text.toString().trim()
         email = binding.editEmail.text.toString().trim()
@@ -101,7 +100,7 @@ class RegistroVendedorActivity : AppCompatActivity() {
         datosVendedor["nombre"] = "$nombreBD"
         datosVendedor["email"] = "$emailBD"
         datosVendedor["tipoUsuario"] = "Vendedor"
-        datosVendedor["tiempoRegistro"] = tiempoBD
+        datosVendedor["tiempoRegistro"] = "$tiempoBD"
 
         val references = FirebaseDatabase.getInstance().getReference("Usuarios")
         references.child(userIdBD!!)
