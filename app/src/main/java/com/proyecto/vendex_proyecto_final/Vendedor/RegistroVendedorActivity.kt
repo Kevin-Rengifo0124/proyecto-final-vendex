@@ -43,24 +43,24 @@ class RegistroVendedorActivity : AppCompatActivity() {
 
     private fun validarInformacion() {
         nombre = binding.editNombresVendedor.text.toString().trim()
-        email = binding.editEmailVendedor.text.toString().trim()
-        password = binding.editPasswordVendedor.text.toString().trim()
-        comprobarPassword = binding.editConfirmarPasswordVendedor.text.toString().trim()
+        email = binding.editEmail.text.toString().trim()
+        password = binding.editPassword.text.toString().trim()
+        comprobarPassword = binding.editConfirmarPassword.text.toString().trim()
 
         if (nombre.isEmpty()) {
             mostrarError(binding.editNombresVendedor, "Ingrese su nombre completo")
         } else if (email.isEmpty()) {
-            mostrarError(binding.editEmailVendedor, "Ingrese su email completo")
+            mostrarError(binding.editEmail, "Ingrese su email completo")
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            mostrarError(binding.editEmailVendedor, "Email no válido")
+            mostrarError(binding.editEmail, "Email no válido")
         } else if (password.isEmpty()) {
-            mostrarError(binding.editPasswordVendedor, "Ingrese su password")
+            mostrarError(binding.editPassword, "Ingrese su password")
         } else if (password.length < 6) {
-            mostrarError(binding.editPasswordVendedor, "Mínimo 6 caracteres")
+            mostrarError(binding.editPassword, "Mínimo 6 caracteres")
         } else if (comprobarPassword.isEmpty()) {
-            mostrarError(binding.editConfirmarPasswordVendedor, "Confirme el password")
+            mostrarError(binding.editConfirmarPassword, "Confirme el password")
         } else if (password != comprobarPassword) {
-            mostrarError(binding.editConfirmarPasswordVendedor, "No coincide el password")
+            mostrarError(binding.editConfirmarPassword, "No coincide el password")
         } else {
             registrarVendedor()
         }

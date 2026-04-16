@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/vendex_bg_dark"
-    tools:context=".Vendedor.RegistroVendedorActivity">
+    tools:context=".Cliente.RegistroClienteActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_marginBottom="20dp">
 
             <TextView
-                android:text="@string/txtRegistroVendedor"
+                android:text="@string/txtRegistroCliente"
                 android:textColor="@color/colorBlanco"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -41,7 +41,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/registro_vendedor"
+                android:src="@drawable/registro_clientes"
                 android:layout_width="80dp"
                 android:layout_height="80dp"/>
         </LinearLayout>
@@ -54,15 +54,15 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editNombresVendedor"
-                android:hint="@string/editNombresVendedor"
+                android:id="@+id/editNombresCliente"
+                android:hint="@string/editNombresCliente"
                 android:drawableStart="@drawable/icono_nombres"
                 android:textColor="@color/colorBlanco"
                 android:drawablePadding="5dp"
                 android:inputType="textPersonName|textCapWords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--Email-->
@@ -125,12 +125,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Registrar Vendedor-->
+        <!--Registrar Cliente-->
         <com.google.android.material.button.MaterialButton
             app:backgroundTint="@color/vendex_blue_primary"
             android:layout_marginBottom="10dp"
-            android:id="@+id/botonRegistrarVendedor"
-            android:text="@string/botonRegistrarVendedor"
+            android:id="@+id/botonRegistrarCliente"
+            android:text="@string/botonRegistrarCliente"
             app:cornerRadius="12dp"
             android:textAllCaps="true"
             android:layout_marginTop="25dp"
@@ -140,5 +140,6 @@
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </ScrollView>
