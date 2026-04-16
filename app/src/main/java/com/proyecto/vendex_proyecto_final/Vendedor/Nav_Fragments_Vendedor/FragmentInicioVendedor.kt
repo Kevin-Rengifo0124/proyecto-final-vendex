@@ -1,6 +1,7 @@
 package com.proyecto.vendex_proyecto_final.Vendedor.Nav_Fragments_Vendedor
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.Toast
 import com.proyecto.vendex_proyecto_final.R
 import com.proyecto.vendex_proyecto_final.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentOrdenesVendedor
 import com.proyecto.vendex_proyecto_final.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentProductosVendedor
+import com.proyecto.vendex_proyecto_final.Vendedor.Productos.AgregarProductoActivity
 import com.proyecto.vendex_proyecto_final.databinding.FragmentInicioVendedorBinding
 
 class FragmentInicioVendedor : Fragment() {
@@ -45,8 +47,7 @@ class FragmentInicioVendedor : Fragment() {
         replaceFragment(FragmentProductosVendedor())
         binding.bottomNavigation.selectedItemId = R.id.opcion_mis_productos_vendedor
         binding.addFab.setOnClickListener {
-            Toast.makeText(mContext, "Has presionado en el botón flotante", Toast.LENGTH_SHORT)
-                .show()
+           startActivity(Intent(context, AgregarProductoActivity:: class.java))
         }
         return binding.root
     }

@@ -59,6 +59,19 @@
 
     <!--Productos-->
     <string name="txtAgregarProductos">Agregar Productos</string>
+    <string name="editNombreProducto">Nombre del Producto</string>
+    <string name="editDescripcionProducto">Descripción</string>
+    <string name="categoria">Categoria</string>
+    <string name="editPrecioProducto">Precio</string>
+    <string name="txtDescuento">Descuento</string>
+    <string name="editPrecioConDescuentoProducto">Precio con descuento aplicado</string>
+    <string name="editNotaDescuentoProducto">Ejm: 10% Descuento</string>
+    <string name="botonAgregarProducto">Agregar Producto</string>
+
+
+
+
+
 
 
 
