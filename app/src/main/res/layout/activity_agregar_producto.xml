@@ -7,35 +7,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/vendex_bg_dark"
-    android:orientation="vertical"
     tools:context=".Vendedor.Productos.AgregarProductoActivity">
 
+    <!-- Toolbar con estilo -->
     <RelativeLayout
         android:id="@+id/toolbarRL"
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="80dp"
+        android:background="@drawable/bg_toolbar"
+        android:paddingTop="15dp">
 
         <TextView
             android:text="@string/txtAgregarProductos"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentBottom="true"
-            android:background="#ccc"/>
     </RelativeLayout>
 
+    <!-- Imagen principal -->
     <RelativeLayout
         android:id="@+id/RLImagen"
-        android:layout_below = "@+id/toolbarRL"
+        android:layout_below="@id/toolbarRL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <androidx.appcompat.widget.AppCompatImageView
-           android:id="@+id/imgAgregarProducto"
+            android:id="@+id/imgAgregarProducto"
             android:layout_centerInParent="true"
             android:layout_marginTop="15dp"
             android:src="@drawable/agregar_producto"
@@ -44,14 +45,12 @@
 
     </RelativeLayout>
 
-
     <!-- Contenido scrollable -->
     <androidx.core.widget.NestedScrollView
-        android:layout_below="@+id/RLImagen"
-        android:padding="10dp"
+        android:layout_below="@id/RLImagen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -59,6 +58,7 @@
 
             <!-- Grid de imágenes seleccionadas -->
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImagenes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:spanCount="4"
