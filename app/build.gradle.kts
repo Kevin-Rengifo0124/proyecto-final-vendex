@@ -49,7 +49,10 @@ dependencies {
     implementation(libs.lottie)/*Animaciones*/
     implementation(libs.firebaseAuthentication)/*Authenticacion con firebase*/
     implementation(libs.firebaseDataBase)/*Base de datos con firebase*/
-    implementation(libs.imagePicker) /*Recortar una imagen*/
+    implementation(libs.imagePicker) {
+        exclude(group = "com.github.yalantis", module = "ucrop")
+    }
+    implementation(libs.ucrop)
     implementation(libs.glide)/*Leer imagenes*/
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
