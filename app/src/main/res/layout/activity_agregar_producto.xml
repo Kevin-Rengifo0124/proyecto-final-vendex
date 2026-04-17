@@ -98,6 +98,18 @@
                     android:layout_height="wrap_content"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+            
+            <TextView
+                android:id="@+id/categoria"
+                android:text="@string/categoria"
+                android:padding="10dp"
+                style="@style/InputOutlined"
+                android:drawableEnd="@drawable/icono_abajo"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_editext"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <!-- Precio del producto -->
             <com.google.android.material.textfield.TextInputLayout
