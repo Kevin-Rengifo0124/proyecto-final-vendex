@@ -13,8 +13,13 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.registerForActivityResult
 import com.github.dhaval2404.imagepicker.ImagePicker
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import com.proyecto.vendex_proyecto_final.Adaptadores.AdaptadorCategoriaVendedor
+import com.proyecto.vendex_proyecto_final.Modelo.ModeloCategoria
 import com.proyecto.vendex_proyecto_final.R
 import com.proyecto.vendex_proyecto_final.databinding.FragmentCategoriasVendedorBinding
 
@@ -27,6 +32,9 @@ class FragmentCategoriasVendedor : Fragment() {
     private lateinit var progressDialog: ProgressDialog
 
     private var imageUri: Uri? = null
+
+    private lateinit var categoriasArrayList: ArrayList<ModeloCategoria>
+    private lateinit var adaptadorCategoriaVendedor: AdaptadorCategoriaVendedor
 
     override fun onAttach(context: Context) {
         mContext = context
@@ -50,7 +58,30 @@ class FragmentCategoriasVendedor : Fragment() {
         binding.botonAgregarCategoria.setOnClickListener {
             validarInformacion()
         }
+
+        listarCategorias()
+
         return binding.root
+    }
+
+    private fun listarCategorias() {
+        categoriasArrayList = ArrayList()
+        val ref= FirebaseDatabase.getInstance().getReference("Categorias").orderByChild("categoria")
+        ref.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                categoriasArrayList.clear()
+                for (ds in snapshot.children){
+                    val modelo = ds.getValue(ModeloCategoria::class.java)
+                    categoriasArrayList.add(modelo!!)
+                }
+                adaptadorCategoriaVendedor = AdaptadorCategoriaVendedor(mContext, categoriasArrayList)
+                binding.recyclerViewCategorias.adapter = adaptadorCategoriaVendedor
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 
     private fun seleccionarImagenCategorias() {
