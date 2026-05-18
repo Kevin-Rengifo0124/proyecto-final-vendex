@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.imagePicker) {
         exclude(group = "com.github.yalantis", module = "ucrop")
     }
+    implementation(libs.storage)/*Subir archivos multimedia*/
     implementation(libs.ucrop)
     implementation(libs.glide)/*Leer imagenes*/
     testImplementation(libs.junit)

@@ -15,6 +15,7 @@ firebaseDataBaseVersion="22.0.1"
 imagePickerVersion="2.1"
 glideVersion="5.0.5"
 ucropVersion="2.2.8"
+storageVersion="22.0.1"
 
 
 [libraries]
@@ -32,6 +33,7 @@ firebaseDataBase = { group = "com.google.firebase", name = "firebase-database", 
 imagePicker= {group = "com.github.dhaval2404", name = "imagepicker", version.ref = "imagePickerVersion"}
 glide= {group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion"}
 ucrop = { group = "com.github.yalantis", name = "ucrop", version.ref = "ucropVersion" }
+storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "storageVersion" }
 
 
 
