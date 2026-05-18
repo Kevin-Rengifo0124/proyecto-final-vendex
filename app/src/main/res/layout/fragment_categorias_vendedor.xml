@@ -50,9 +50,12 @@
             android:textAllCaps="true"
             app:cornerRadius="8dp" />
 
+        <!--Lista categoria-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCategorias"
             android:layout_margin="5dp"
+            tools:listitem="@layout/item_categoria_vendedor"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

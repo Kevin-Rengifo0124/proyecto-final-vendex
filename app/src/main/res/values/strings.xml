@@ -73,6 +73,10 @@
     <string name="editCategoria">Ingrese la Categoria</string>
     <string name="botonAgregarCategoria">Agregar Categoria</string>
 
+    <!--Item Categorias Vendedor-->
+    <string name="item_nombre_categoria_vendedor">Nombre Categoria</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
