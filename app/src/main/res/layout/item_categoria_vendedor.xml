@@ -1,33 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:contentPadding="10dp"
-    app:cardCornerRadius="10dp"
-    android:layout_margin="10dp"
-    app:cardElevation="0dp">
-    
-    <androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/vendex_card_bg"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/vendex_blue_primary"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_gravity="center_vertical"
-        android:padding="5dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Ícono decorativo -->
+        <ImageView
+            android:src="@drawable/icono_categoria"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            app:tint="@color/vendex_blue_primary"/>
+
+        <!-- Nombre de la categoría -->
         <TextView
             android:id="@+id/item_nombre_categoria_vendedor"
             android:text="@string/item_nombre_categoria_vendedor"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
+            android:textColor="@color/colorBlanco"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"/>
+
+        <!-- Botón eliminar -->
         <ImageButton
             android:id="@+id/item_eliminar_categoria"
             android:src="@drawable/icono_eliminar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:background="@color/vendex_input_bg"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="6dp"
+            app:tint="@color/vendex_blue_primary"/>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
