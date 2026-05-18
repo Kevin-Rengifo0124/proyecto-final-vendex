@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Vendedor.Nav_Fragments_Vendedor.FragmentCategoriasVendedor">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -12,35 +12,43 @@
         android:layout_marginTop="15dp"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagenCategorias"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/categorias" />
+
         <!--Nombre de la categoria-->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/InputOutlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/InputOutlined"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editCategoria"
-                android:hint="@string/editCategoria"
-                android:textColor="@color/colorBlanco"
-                android:inputType="textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:drawableStart="@drawable/icono_categoria"
                 android:drawablePadding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:hint="@string/editCategoria"
+                android:inputType="textCapWords"
+                android:textColor="@color/colorBlanco" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--Agregar categoria la BD-->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/botonAgregarCategoria"
-            android:text="@string/botonAgregarCategoria"
-            app:cornerRadius="8dp"
-            android:textAllCaps="true"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/botonAgregarCategoria"
+            android:textAllCaps="true"
+            app:cornerRadius="8dp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
