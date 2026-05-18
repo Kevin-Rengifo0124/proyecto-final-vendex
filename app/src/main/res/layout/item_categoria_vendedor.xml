@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ImageButton
-            android:id="@+id/item_eliminar_categorias"
+            android:id="@+id/item_eliminar_categoria"
             android:src="@drawable/icono_eliminar"
             android:layout_width="40dp"
             android:layout_height="40dp"/>

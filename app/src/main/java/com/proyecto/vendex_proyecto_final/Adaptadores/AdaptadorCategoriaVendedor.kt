@@ -51,6 +51,6 @@ class AdaptadorCategoriaVendedor :
     inner class HolderCategoriaVendedor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var item_nombre_categoria_vendedor = binding.itemNombreCategoriaVendedor
-        var item_eliminar_categorias = binding.itemEliminarCategorias
+        var item_eliminar_categorias = binding.itemEliminarCategoria
     }
 }
